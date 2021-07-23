@@ -18,10 +18,8 @@ class Slots extends React.Component {
     }
     return (
       <div>
-        <h1>------------------</h1>
-        <h3>{s1} - {s2} - {s3}</h3>
+        <h3 className="Slots">{s1} - {s2} - {s3}</h3>
         {msg}
-        <h1>------------------</h1>
       </div>
     )
   }
