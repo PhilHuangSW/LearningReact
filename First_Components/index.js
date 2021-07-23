@@ -2,7 +2,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Hello to="World" from="Phil" />
+        {/* <Hello to="World" from="Phil" /> */}
+        {/* <Friend name="Elton" hobbies={["Piano", "Singing", "Dancing"]} /> */}
         {/* <Hello to="Phil" from="Rain" /> */}
         {/* <NumPicker /> */}
         {/* <SlotMachine
