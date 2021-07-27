@@ -6,6 +6,7 @@ import './App.css';
 import Clicker from './Clicker';
 import Score from './Score';
 import Lotto from './Lotto';
+import CoinFlipper from './CoinFlipper';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
       <BrokenClick /> */}
       {/* <Clicker /> */}
       {/* <Score score={1} /> */}
-      <Lotto name="Lotto" numBalls={6} maxNum={40} />
+      {/* <Lotto name="Lotto" numBalls={6} maxNum={40} />
       <Lotto />
-      <Lotto name="Mini Daily" numBalls={4} maxNum={20} />
+      <Lotto name="Mini Daily" numBalls={4} maxNum={20} /> */}
+      <CoinFlipper />
     </div>
   );
 }
