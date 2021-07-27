@@ -1,0 +1,19 @@
+.Lotto {
+  border: solid 2px;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 20px;
+}
+
+.Lotto-Ball {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Lotto-Button {
+  width: 350px;
+  margin-top: 25px;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+}
