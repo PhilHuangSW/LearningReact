@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Boxes.css';
-import { random } from './helpers';
+import { random } from '../helpers';
 
 class Boxes extends Component {
   constructor(props) {

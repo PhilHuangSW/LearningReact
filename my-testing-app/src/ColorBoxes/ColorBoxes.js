@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Boxes from './Boxes';
 import './ColorBoxes.css';
-import { random } from './helpers';
+import { random } from '../helpers';
 
 class ColorBoxes extends Component {
   static defaultProps = {

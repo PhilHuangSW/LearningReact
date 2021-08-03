@@ -8,12 +8,14 @@ import './App.css';
 // import Lotto from './Lotto';
 // import CoinFlipper from './CoinFlipper';
 // import ColorBoxes from './ColorBoxes';
-import NumberList from './NumberList';
+// import NumberList from './NumberList';
+// import Form from './Form/Form';
+import BoxList from './BoxList/BoxList';
 
 function App() {
   return (
     <div className="App">
-      <NumberList />
+      <BoxList />
     </div>
   );
 }
