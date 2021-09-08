@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 
 class NewBoxForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: null,
-      height: null,
+      width: 0,
+      height: 0,
       backgroundColor: ''
     }
     this.handleChange = this.handleChange.bind(this);
@@ -21,9 +22,11 @@ class NewBoxForm extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault();
+    const newBox = { ...this.state, id: uuidv4() };
+    this.props.addBox(newBox);
     this.setState({
-      width: null,
-      height: null,
+      width: 0,
+      height: 0,
       backgroundColor: ''
     })
   }
@@ -33,34 +36,39 @@ class NewBoxForm extends Component {
       <div>
         <h1>New Boxes: </h1>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="width">Width: </label>
-          <input
-            type="text"
-            value={this.state.width}
-            name="width"
-            onChange={this.handleChange}
-            id="width"
-          />
-          <br />
-          <label htmlFor="height">Height: </label>
-          <input
-            type="text"
-            value={this.state.height}
-            name="height"
-            onChange={this.handleChange}
-            id="height"
-          />
-          <br />
-          <label htmlFor="backgroundColor">Background Color: </label>
-          <input
-            type="text"
-            value={this.state.backgroundColor}
-            name="backgroundColor"
-            onChange={this.handleChange}
-            id="backgroundColor"
-          />
-          <br />
-          <button>Add Color Box</button>
+          <div>
+            <label htmlFor="width">Width: </label>
+            <input
+              type="number"
+              value={this.state.width}
+              name="width"
+              onChange={this.handleChange}
+              id="width"
+            />
+          </div>
+          <div>
+            <label htmlFor="height">Height: </label>
+            <input
+              type="number"
+              value={this.state.height}
+              name="height"
+              onChange={this.handleChange}
+              id="height"
+            />
+          </div>
+          <div>
+            <label htmlFor="backgroundColor">Background Color: </label>
+            <input
+              type="text"
+              value={this.state.backgroundColor}
+              name="backgroundColor"
+              onChange={this.handleChange}
+              id="backgroundColor"
+            />
+          </div>
+          <div>
+            <button>Add Color Box</button>
+          </div>
         </form>
       </div>
     )
